@@ -26,4 +26,10 @@ return {
       },
     },
   },
+  config = function()
+    require('neo-tree').setup {
+      use_libuv_file_watcher = true,
+      close_if_last_window = true,
+    }
+  end,
 }
