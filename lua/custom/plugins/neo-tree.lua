@@ -10,4 +10,13 @@ return {
     'MunifTanjim/nui.nvim',
     -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
   },
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true, -- Show hidden files
+        hide_dotfiles = false, -- Do not hide dotfiles (e.g., .git, .env)
+        hide_gitignored = true, -- Optionally hide files ignored by Git
+      },
+    },
+  },
 }
