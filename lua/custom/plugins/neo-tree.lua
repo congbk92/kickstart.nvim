@@ -20,4 +20,5 @@ return {
     },
   },
   vim.keymap.set('n', '<leader>tt', '<Cmd>Neotree toggle reveal<CR>', { desc = 'Neo[t]ree [t]oggle reveal' }),
+  vim.keymap.set('n', '<leader>tr', '<Cmd>Neotree reveal<CR>', { desc = 'Neo[t]ree [r]eveal' }),
 }
