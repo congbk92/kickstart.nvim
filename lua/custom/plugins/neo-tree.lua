@@ -19,4 +19,5 @@ return {
       },
     },
   },
+  vim.keymap.set('n', 'tt', '<Cmd>Neotree toggle reveal<CR>'),
 }
