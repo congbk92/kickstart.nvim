@@ -756,8 +756,11 @@ require('lazy').setup({
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
+        local disable_filetypes = {} -- { c = true, cpp = true }
+        local has_clang_format = vim.fn.findfile('.clang-format', '.;') ~= ''
         if disable_filetypes[vim.bo[bufnr].filetype] then
+          return nil
+        elseif (vim.bo[bufnr].filetype == 'c' or vim.bo[bufnr].filetype == 'cpp') and not has_clang_format then
           return nil
         else
           return {
@@ -768,6 +771,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        cpp = { 'clang-format' },
+        c = { 'clang-format' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
