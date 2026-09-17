@@ -1,0 +1,11 @@
+-- Disabled: hardtime.nvim — nudges you away from bad vim habits
+-- https://github.com/m4xshen/hardtime.nvim
+--
+-- To enable: uncomment the block below and add `require 'custom.plugins.hardtime'`
+-- to lua/custom/plugins/init.lua.
+--
+-- vim.pack.add {
+--   'https://github.com/m4xshen/hardtime.nvim',
+--   'https://github.com/MunifTanjim/nui.nvim',
+-- }
+-- require('hardtime').setup {}
