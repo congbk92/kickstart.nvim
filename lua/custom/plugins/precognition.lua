@@ -1,0 +1,12 @@
+-- Disabled: precognition.nvim — live motion hints on a virtual line
+-- https://github.com/tris203/precognition.nvim
+--
+-- To enable: uncomment the block below and add `require 'custom.plugins.precognition'`
+-- to lua/custom/plugins/init.lua.
+--
+-- vim.pack.add { 'https://github.com/tris203/precognition.nvim' }
+-- require('precognition').setup {
+--   -- start_visible = true,
+--   -- show_blank_virt_line = true,
+--   -- highlight_color = { link = 'Comment' },
+-- }
